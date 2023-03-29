@@ -64,9 +64,15 @@ body {
   font-size: 16px;
   border: none;
 }
+.top-header .dropbtn:hover {
+  cursor: pointer;
+}
 .top-header .dropdown {
   position: relative;
   display: inline-block;
+}
+.top-header .dropdown:hover {
+  cursor: pointer;
 }
 .top-header .dropdown-content {
   display: none;
@@ -94,4 +100,55 @@ body {
   width: 1px;
   height: 32px;
   background-color: var(--input-bg);
+}
+
+.search-holder {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  height: 64px;
+  border: none;
+  background-color: var(--input-bg);
+  border-radius: 16px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.search-input:focus {
+  outline: 2px solid var(--input-border);
+}
+.search-input:hover {
+  cursor: pointer;
+}
+
+.search-icon {
+  position: relative;
+  left: -35px;
+  width: 0;
+  z-index: 10;
+}
+
+.word-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 114px;
+  margin: 45px 0 40px;
+}
+.word-title h1 {
+  font-size: 64px;
+}
+.word-title p {
+  font-size: 24px;
+  color: var(--font-purple);
+}
+.word-title .play-icon circle:hover {
+  opacity: 1;
+}
+.word-title .play-icon:hover {
+  cursor: pointer;
+  fill: #000;
 }/*# sourceMappingURL=main.css.map */
