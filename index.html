@@ -3,12 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/inputs.css">
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
 <body>
-
+  <div class="wrapper">
+    <header class="top-header">
+      <i><svg xmlns="http://www.w3.org/2000/svg" width="34" height="38" viewBox="0 0 34 38"><g fill="none" fill-rule="evenodd" stroke="#838383" stroke-linecap="round" stroke-width="1.5"><path d="M1 33V5a4 4 0 0 1 4-4h26.8A1.2 1.2 0 0 1 33 2.2v26.228M5 29h28M5 37h28"/><path stroke-linejoin="round" d="M5 37a4 4 0 1 1 0-8"/><path d="M11 9h12"/></g></svg></i>
+      <div class="switchers">
+        <div class="dropdown">
+          <button class="dropbtn">Serif</button>
+          <div class="dropdown-content">
+            <a href="#">Sans Serif</a>
+            <a href="#">Serif</a>
+            <a href="#">Mono</a>
+          </div>
+          <i><svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8"><path fill="none" stroke="#A445ED" stroke-width="1.5" d="m1 1 6 6 6-6"/></svg></i>
+        </div>
+        <div class="bar"></div>
+        <div>
+          <input type="range" min="0" max="1" value="0">
+        </div>
+        <i><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><path fill="none" stroke="#838383" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z"/></svg></i>
+      </div>
+    </header>
+    <main>
+      <div>
+        <header>
+          <input type="text">
+          <i>search</i>
+        </header>
+        <section>
+          <div>
+            <h1>Keyboard</h1>
+            <p>description</p>
+          </div>
+          <i>PLAY</i>
+        </section>
+        <section>
+          <h2>noun</h2>
+          <div>
+            <p>meaning</p>
+            <ul>
+              <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
+              <li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
+              <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
+            </ul>
+          </div>
+          <div>
+            <p>Synonums</p>
+            <p>eletronic keyboard</p>
+          </div>
+        </section>
+        <section>
+          <h2>verb</h2>
+          <div>
+            <p>Meaning</p>
+            <ul>
+              <li>To type on a coputer keyboard</li>
+              "Keyboarding is the part of this job i hate the most"
+            </ul>
+            <hr>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>Source</p>
+      <a href="" target="_blank">https://en.wikitionary.org/wiki/keyboard</a>
+      <i>exit</i>
+    </footer>
+  </div>
 </body>
 </html>
