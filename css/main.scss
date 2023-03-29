@@ -17,6 +17,7 @@
     --input-border-error: #FF5252;
     // purple-color
     --purple: #A445ED;
+    --line: #e9e9e9;
 }
 .dark{
     // backgroud
@@ -171,3 +172,84 @@ body{
     }
 }
 
+
+.word-type{
+    font-size: 24px;
+    &::after{
+        position: relative;
+        display: block;
+        content: "";
+        width: calc(100% - 80px);
+        left: 80px;
+        top: -13px;
+        height: 1px;
+        background-color: var(--line);
+    }
+    margin: 0 0 40px;
+}
+
+.meaning-wrapper{
+    p{
+        color: #757575;
+        margin: 40px 0 25px;
+    }
+    ul{
+        margin: 0 0 0 52px;
+        li{
+            list-style: none;
+            margin: 0 0 13px;
+            &::before{
+                content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                color: var(--purple); /* Change the color */
+                font-weight: bold; /* If you want it to be bold */
+                display: inline-block; /* Needed to add space between the bullet and the text */
+                width: 1em; /* Also needed for space (tweak if needed) */
+                margin-left: -1em;
+            }
+        }
+    }
+    span{
+        color: #757575;
+    }
+    hr{
+        background-color: var(--line);
+        border: none;
+        height: 1px;
+        margin: 40px 0 19px;
+    }
+}
+
+.synonums{
+    margin: 40px 0;
+    span{
+        font-weight: bold;
+        color: var(--font-purple);
+    }
+}
+
+.verb-section{
+    h2{
+        &::after{
+            position: relative;
+            display: block;
+            content: "";
+            width: calc(100% - 80px);
+            left: 80px;
+            top: -13px;
+            height: 1px;
+            background-color: var(--line);
+        }
+    }
+}
+
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 340px;
+    text-decoration: underline;
+    color: #757575;
+    a{
+        color: #757575;
+    }
+}
