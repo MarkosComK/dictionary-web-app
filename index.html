@@ -33,18 +33,20 @@
     <main>
       <div>
         <header class="search-holder">
-          <input type="text" class="search-input">
-          <i class="search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path fill="none" stroke="#A445ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"/></svg></i>
+          <form id="form" action="" class="form-input">
+            <input type="text" class="search-input" id="input" value="">
+            <button type="submit" class="search-icon" id="submit"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path fill="none" stroke="#A445ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"/></svg></button>
+          </form>
         </header>
         <section class="word-title">
           <div>
-            <h1>Keyboard</h1>
-            <p>/ˈkiːbɔːd/</p>
+            <h1 id="searched-word">Keyboard</h1>
+            <p id="pronounce">/ˈkiːbɔːd/</p>
           </div>
-          <i><svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75"><g fill="#A445ED" fill-rule="evenodd"><circle cx="37.5" cy="37.5" r="37.5" opacity=".25"/><path d="M29 27v21l21-10.5z" /></g></svg></i>
+          <button id="play-audio"><i><svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75"><g fill="#A445ED" fill-rule="evenodd"><circle cx="37.5" cy="37.5" r="37.5" opacity=".25"/><path d="M29 27v21l21-10.5z" /></g></svg></i></button>
         </section>
-        <section class="word-type-wrapper">
-          <h2 class="word-type">noun</h2>
+        <section class="word-type-wrapper" id="meaning-section">
+          <!-- <h2 class="word-type">noun</h2>
           <div class="meaning-wrapper">
             <p>Meaning</p>
             <ul>
@@ -55,9 +57,9 @@
           </div>
           <div class="synonums">
             <p>Synonums <span>eletronic keyboard</span></p>
-          </div>
+          </div> -->
         </section>
-        <section class="verb-section">
+        <!-- <section class="ﬂ-section">
           <h2>verb</h2>
           <div class="meaning-wrapper">
             <p>Meaning</p>
@@ -66,8 +68,8 @@
               <span>"Keyboarding is the part of this job i hate the most"</span>
             </ul>
             <hr>
-          </div>
-        </section>
+          </div> 
+        </section> -->
       </div>
     </main>
     <footer>
