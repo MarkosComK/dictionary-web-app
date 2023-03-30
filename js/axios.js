@@ -62,14 +62,13 @@ function innerData(){
 	//inner the meanings ul
 	const meaningSection = document.querySelector("#meaning-section")
 	const meaning = data.meanings
+	const definitions = meaning[0].definitions
 	meaningSection.innerHTML = `
 	<h2 class="word-type">${meaning[0].partOfSpeech}</h2>
 	<div class="meaning-wrapper">
 	  <p>Meaning</p>
 	  <ul>
-		<li>${meaning[0].definitions[0].definition}</li>
-		<li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
-		<li>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
+	  ${definitions.map(definition => {return `<li>${definition.definition}</li>`})}
 	  </ul>
 	</div>
 	<div class="synonums">
