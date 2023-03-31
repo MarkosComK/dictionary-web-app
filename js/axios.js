@@ -28,11 +28,7 @@ window.addEventListener("load", () => {
 	
 	axios.get(url).then(function (response) {
 		data = response.data[0]
-		console.log(data);
-		//console.log(data)
-
 		innerData()
-
 	}).catch(function (error) {
 		console.error(error);
 	});
@@ -50,21 +46,24 @@ function innerData(){
 	//inner the meanings ul
 	const meaningSection = document.querySelector("#meaning-section")
 	const meaning = data.meanings
-	console.log(meaning)
 	meaningSection.innerHTML = `
 	${meaning.map(meaning => {
 		const definitions = meaning.definitions
 		const synonyms = meaning.synonyms
+		const definitionsArr = definitions.map(definition => {return `<li>${definition.definition}</li>`})
+		const singleDefinition = definitionsArr.join("") //transform the array in a string to evade the comma after each return
+		const synonymsArr = synonyms.map(synonym => {return ` <span>${synonym}</span>`})
+		const singleSynonym = synonymsArr.join("")
 		return (
 			`<h2 class="word-type">${meaning.partOfSpeech}</h2>
 			<div class="meaning-wrapper">
 			  <p>Meaning</p>
 			  <ul>
-			  ${definitions.map(definition => {return `<li>${definition.definition}</li>`})}
+			  ${singleDefinition}
 			  </ul>
-			</div>
+			  </div>
 			<div class="synonums"˝>
-			  <p>Synonyms ${synonyms.map(synonym => {return ` <span>${synonym}</span>`})}</p>
+			  <p>Synonyms ${singleSynonym}</p>
 			</div>`
 		)
 	})}
