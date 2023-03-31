@@ -18,6 +18,8 @@
     // purple-color
     --purple: #A445ED;
     --line: #e9e9e9;
+    //box shadow
+    --box-shadow: #00000033;
 }
 .dark{
     // backgroud
@@ -32,6 +34,8 @@
     --input-border-error: #FF5252;
     // purple-color
     --purple: #A445ED;
+    //box shadow
+    --box-shadow: #a445ed;
 }
 
 body{
@@ -103,14 +107,14 @@ button, input[type="submit"], input[type="reset"] {
         left: -80px;
         background-color: var(--background);
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px var(--box-shadow);
         border-radius: 16px;
         z-index: 1;
     }
     
     /* Links inside the dropdown */
     .dropdown-content a {
-        color: black;
+        color: var(--font);
         padding: 10px 24px;
         text-decoration: none;
         display: block;

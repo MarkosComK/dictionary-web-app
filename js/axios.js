@@ -61,7 +61,7 @@ function innerData(){
 		const definitionsArr = definitions.map(definition => {return `<li>${definition.definition}</li>`})
 		const singleDefinition = definitionsArr.join("") //transform the array in a string to evade the comma after each return
 		const synonymsArr = synonyms.map(synonym => {return `<span>${synonym}</span>`})
-		const singleSynonym = synonymsArr.join(", ")
+		const singleSynonym = synonymsArr.join(",  ")
 		return (
 			`<h2 class="word-type">${meaning.partOfSpeech}</h2>
 			<div class="meaning-wrapper">
