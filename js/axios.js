@@ -62,17 +62,23 @@ function innerData(){
 	//inner the meanings ul
 	const meaningSection = document.querySelector("#meaning-section")
 	const meaning = data.meanings
-	const definitions = meaning[0].definitions
+	console.log(meaning)
 	meaningSection.innerHTML = `
-	<h2 class="word-type">${meaning[0].partOfSpeech}</h2>
-	<div class="meaning-wrapper">
-	  <p>Meaning</p>
-	  <ul>
-	  ${definitions.map(definition => {return `<li>${definition.definition}</li>`})}
-	  </ul>
-	</div>
-	<div class="synonums">
-	  <p>Synonums <span>eletronic keyboard</span></p>
-	</div>
+	${meaning.map(meaning => {
+		const definitions = meaning.definitions
+		const synonyms = meaning.synonyms
+		return (
+			`<h2 class="word-type">${meaning.partOfSpeech}</h2>
+			<div class="meaning-wrapper">
+			  <p>Meaning</p>
+			  <ul>
+			  ${definitions.map(definition => {return `<li>${definition.definition}</li>`})}
+			  </ul>
+			</div>
+			<div class="synonums">
+			  <p>Synonyms ${synonyms.map(synonym => {return ` <span>${synonym}</span>`})}</p>
+			</div>`
+		)
+	})}
 	`
 }
