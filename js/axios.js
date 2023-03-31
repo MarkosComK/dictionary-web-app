@@ -1,6 +1,8 @@
 const submit = document.querySelector("#submit")
 const searchedWord = document.querySelector("#searched-word")
 const pronounce = document.querySelector("#pronounce")
+const content = document.querySelector("#content")
+const footer = document.querySelector("footer")
 let word = ""
 let data
 
@@ -11,12 +13,15 @@ submit.addEventListener("click", (e) => {
 	
 	axios.get(url).then(function (response) {
 		data = response.data[0]
-		console.log(data);
-		//console.log(data)
+		content.classList.remove("remove-display")
+		footer.classList.remove("remove-display")
 
 		innerData()
 
 	}).catch(function (error) {
+		content.classList.add("remove-display")
+		footer.classList.add("remove-display")
+		console.log(content)
 		console.error(error);
 	});
 

@@ -242,4 +242,8 @@ button, input[type=submit], input[type=reset] {
 }
 .footer-flex a {
   color: #757575;
+}
+
+.remove-display {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
