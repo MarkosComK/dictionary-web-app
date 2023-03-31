@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/input-theme.css">
+  <link rel="stylesheet" href="./css/error.css">
   <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   <title>Frontend Mentor | Dictionary web app</title>
 </head>
@@ -38,6 +39,11 @@
             <button type="submit" class="search-icon" id="submit"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path fill="none" stroke="#A445ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"/></svg></button>
           </form>
         </header>
+        <div class="error-msg remove-display">
+          <span class="emoji">😕</span>
+          <p><strong>No Definitions Found</strong></p>
+          <p>Sorry pal, we couldn't find definitions for the word you were looking for. You can try the search again at later time or head to the web instead.</p>
+        </div>
         <div id="content">
           <section class="word-title">
             <div>

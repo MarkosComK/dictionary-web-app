@@ -246,4 +246,8 @@ button, input[type=submit], input[type=reset] {
 
 .remove-display {
   display: none;
+}
+
+.add-display {
+  display: inline;
 }/*# sourceMappingURL=main.css.map */

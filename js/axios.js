@@ -1,6 +1,7 @@
 const submit = document.querySelector("#submit")
 const searchedWord = document.querySelector("#searched-word")
 const pronounce = document.querySelector("#pronounce")
+const errorMsg = document.querySelector(".error-msg")
 const content = document.querySelector("#content")
 const footer = document.querySelector("footer")
 let word = ""
@@ -9,16 +10,19 @@ let data
 submit.addEventListener("click", (e) => {
 	e.preventDefault()
 	word = document.querySelector("#input").value
+	
 	const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
 	
 	axios.get(url).then(function (response) {
 		data = response.data[0]
+		errorMsg.classList.add("remove-display")
 		content.classList.remove("remove-display")
 		footer.classList.remove("remove-display")
 
 		innerData()
 
 	}).catch(function (error) {
+		errorMsg.classList.remove("remove-display")
 		content.classList.add("remove-display")
 		footer.classList.add("remove-display")
 		console.log(content)
