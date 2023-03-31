@@ -163,6 +163,8 @@ button, input[type=submit], input[type=reset] {
   padding-left: 20px;
   font-weight: bold;
   font-size: 20px;
+  caret-color: var(--purple);
+  color: var(--font);
 }
 .search-input:focus {
   outline: 2px solid var(--input-border);
@@ -250,6 +252,10 @@ button, input[type=submit], input[type=reset] {
 .synonums span {
   font-weight: bold;
   color: var(--font-purple);
+}
+.synonums span:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .verb-section h2::after {
