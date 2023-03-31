@@ -18,7 +18,7 @@
 }
 
 .dark {
-  --background: #050505;
+  --background: #151515;
   --font: #F2F2F2;
   --font-purple: #A445ED;
   --input-bg: #1F1F1F;
@@ -33,6 +33,8 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  background-color: var(--background);
+  color: var(--font);
 }
 
 button, input[type=submit], input[type=reset] {
@@ -112,6 +114,33 @@ button, input[type=submit], input[type=reset] {
   width: 1px;
   height: 32px;
   background-color: var(--input-bg);
+}
+
+.theme-switcher {
+  width: 40px;
+  height: 20px;
+  background-color: #979797;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher:hover {
+  cursor: pointer;
+  background-color: var(--purple);
+}
+
+.theme-button {
+  width: 14px;
+  height: 14px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  margin: 3px;
+  transition: 0.5s;
+}
+
+.theme-button-switch {
+  transform: translateX(140%);
 }
 
 .search-holder {
