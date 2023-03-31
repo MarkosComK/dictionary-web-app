@@ -42,22 +42,10 @@ function innerData(){
 	//inner the data inside the html elements
 	searchedWord.innerHTML = `${data.word}`
 	pronounce.innerHTML = `${data.phonetic}`
-
+	
 	//get the audio
-	let phonetics = data.phonetics
-	let audioSrc
-	phonetics.forEach((phonetic, index) => {
-		if(phonetic.audio.length > 0){
-			audioSrc = phonetic.audio
-		}
-	});
-	const pronounceAudio = new Audio(audioSrc)
-
-	//select play button html and add listener to play the audio
-	const playBtn = document.querySelector("#play-audio")
-	playBtn.addEventListener("click", () => {
-		pronounceAudio.play()
-	})
+	pronounceAudio = undefined // clear the audio before inner a new one
+	getAudio()	
 
 	//inner the meanings ul
 	const meaningSection = document.querySelector("#meaning-section")
@@ -75,10 +63,30 @@ function innerData(){
 			  ${definitions.map(definition => {return `<li>${definition.definition}</li>`})}
 			  </ul>
 			</div>
-			<div class="synonums">
+			<div class="synonums"˝>
 			  <p>Synonyms ${synonyms.map(synonym => {return ` <span>${synonym}</span>`})}</p>
 			</div>`
 		)
 	})}
 	`
+}
+
+
+// scope to get the audio and play˝
+var pronounceAudio
+function getAudio(){
+	let phonetics = data.phonetics
+	let audioSrc
+	phonetics.forEach(phonetic => {
+		if(phonetic.audio.length > 0){
+			audioSrc = phonetic.audio
+		}
+	});
+	pronounceAudio = new Audio(audioSrc)
+	
+	//select play button html and add listener to play the audio
+	const playBtn = document.querySelector("#play-audio")
+	playBtn.addEventListener("click", () => {
+		pronounceAudio.play()
+	})
 }
