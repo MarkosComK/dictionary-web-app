@@ -38,6 +38,18 @@
     --box-shadow: #a445ed;
 }
 
+@font-face {
+    font-family: "Iconsolata";
+    src: url("../assets/fonts/inconsolata/static/Inconsolata-Regular.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter/static/Inter-Regular.ttf");
+}
+@font-face {
+    font-family: "Iora";
+    src: url("../assets/fonts/lora/static/Lora-Regular.ttf");
+}
 body{
     width: 100vw;
     height: 100vh;
@@ -45,7 +57,7 @@ body{
     display: flex;
     justify-content: center;
     background-color: var(--background);
-    color: var(--font);
+    color: var(--font);    
 
 }
 button, input[type="submit"], input[type="reset"] {
@@ -113,7 +125,7 @@ button, input[type="submit"], input[type="reset"] {
     }
     
     /* Links inside the dropdown */
-    .dropdown-content a {
+    .dropdown-content button {
         color: var(--font);
         padding: 10px 24px;
         text-decoration: none;
@@ -121,7 +133,7 @@ button, input[type="submit"], input[type="reset"] {
     }
     
     /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {color: var(--font-purple);}
+    .dropdown-content button:hover {color: var(--font-purple);}
     
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {display: block;}

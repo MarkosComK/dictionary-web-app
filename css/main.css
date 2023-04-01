@@ -30,6 +30,18 @@
   --box-shadow: #a445ed;
 }
 
+@font-face {
+  font-family: "Iconsolata";
+  src: url("../assets/fonts/inconsolata/static/Inconsolata-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Iora";
+  src: url("../assets/fonts/lora/static/Lora-Regular.ttf");
+}
 body {
   width: 100vw;
   height: 100vh;
@@ -100,13 +112,13 @@ button, input[type=submit], input[type=reset] {
   border-radius: 16px;
   z-index: 1;
 }
-.top-header .dropdown-content a {
+.top-header .dropdown-content button {
   color: var(--font);
   padding: 10px 24px;
   text-decoration: none;
   display: block;
 }
-.top-header .dropdown-content a:hover {
+.top-header .dropdown-content button:hover {
   color: var(--font-purple);
 }
 .top-header .dropdown:hover .dropdown-content {

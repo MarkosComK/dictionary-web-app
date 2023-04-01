@@ -15,3 +15,28 @@ themeButton.addEventListener("click" , (e) => {
     }
     console.log(dark)
 })
+
+//fonts
+
+const changeFontButtons = document.querySelectorAll("#changeFont")
+
+changeFontButtons.forEach(button => {
+    let value
+    button.addEventListener("click", (e) => {
+        value = e.target.value
+
+        switch (value) {
+            case "sans-serif":
+                body.style.fontFamily = "Iconsolata"
+                break
+            case "serif":
+                body.style.fontFamily = "Iora"
+                break
+            case "mono":
+                body.style.fontFamily = "Inter"
+                break    
+            default:
+                break;
+        }
+    })
+})
