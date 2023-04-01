@@ -83,7 +83,7 @@ button, input[type="submit"], input[type="reset"] {
     align-items: center;
 
     width: 100%;
-    height: 146px;
+    height: 15.4vh;
 
 
     .switchers{
@@ -213,16 +213,18 @@ button, input[type="submit"], input[type="reset"] {
     justify-content: space-between;
     align-items: center;
 
-    height: 114px;
+    height: 12vh;
     margin: 45px 0 40px;
     h1{
-        font-size: 64px;
+        font-size: 6.6vh;
     }
     p{
         font-size: 24px;
         color: var(--font-purple);
     }
     .play-icon{
+        width: 7.9vh;
+        height: 7.9vh;
         circle:hover{
             opacity: 1;
         }
@@ -317,16 +319,39 @@ button, input[type="submit"], input[type="reset"] {
 
 .footer-flex{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
     width: min(550px, 100%);
     text-decoration: underline;
     color: #757575;
     a{
+        display: inline-block;
+        word-wrap: break-word;
         color: #757575;
     }
 }
-
+@media screen and (max-width: 493px) {
+    .book{
+        width: 32px;
+    }
+    .top-header{
+        height: 80px;
+    }
+    .word-title{
+        margin: 24px 0;
+        .play-icon{
+            width: 48px;
+            height: 48px;
+        }
+    }
+    .footer-flex{
+        flex-direction: column;
+        align-items: flex-start;
+        a{
+            width: 100%;
+        }
+    }
+  }
 .remove-display{
     display: none;
 }
