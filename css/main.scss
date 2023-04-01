@@ -57,7 +57,8 @@ body{
     display: flex;
     justify-content: center;
     background-color: var(--background);
-    color: var(--font);    
+    color: var(--font);   
+    font-family: "Iora"; 
 
 }
 button, input[type="submit"], input[type="reset"] {
@@ -71,8 +72,9 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .wrapper{
-    width: min(737px, 100%);
+    width: min(761px, 100%);
     margin: 10px;
+    padding: 0 24px;
 }
 
 .top-header{
@@ -244,8 +246,8 @@ button, input[type="submit"], input[type="reset"] {
         position: relative;
         display: block;
         content: "";
-        width: calc(100% - 80px);
-        left: 80px;
+        width: calc(100% - 110px);
+        left: 110px;
         top: -13px;
         height: 1px;
         background-color: var(--line);
@@ -274,7 +276,9 @@ button, input[type="submit"], input[type="reset"] {
         }
     }
     span{
+        display: block;
         color: #757575;
+        margin: 0 0 30px 30px;
     }
     hr{
         background-color: var(--line);
@@ -315,7 +319,7 @@ button, input[type="submit"], input[type="reset"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 340px;
+    width: min(550px, 100%);
     text-decoration: underline;
     color: #757575;
     a{

@@ -13,12 +13,12 @@ themeButton.addEventListener("click" , (e) => {
         themeButton.style = "background-color: var(--purple);"
         body.classList.add("dark")
     }
-    console.log(dark)
 })
 
 //fonts
 
 const changeFontButtons = document.querySelectorAll("#changeFont")
+const actualFontButton = document.querySelector("#actual-font")
 
 changeFontButtons.forEach(button => {
     let value
@@ -28,12 +28,15 @@ changeFontButtons.forEach(button => {
         switch (value) {
             case "sans-serif":
                 body.style.fontFamily = "Iconsolata"
+                actualFontButton.innerHTML = "Sans"
                 break
             case "serif":
                 body.style.fontFamily = "Iora"
+                actualFontButton.innerHTML = "Serif"
                 break
             case "mono":
                 body.style.fontFamily = "Inter"
+                actualFontButton.innerHTML = "Mono"
                 break    
             default:
                 break;

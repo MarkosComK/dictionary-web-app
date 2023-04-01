@@ -3,6 +3,7 @@ const searchedWord = document.querySelector("#searched-word")
 const pronounce = document.querySelector("#pronounce")
 const errorMsg = document.querySelector(".error-msg")
 const content = document.querySelector("#content")
+const sourceLink = document.querySelector("#source-link")
 const footer = document.querySelector("footer")
 let word = ""
 let data
@@ -55,11 +56,29 @@ function innerData(){
 	//inner the meanings ul
 	const meaningSection = document.querySelector("#meaning-section")
 	const meaning = data.meanings
-	const meaningHtml = meaning.map(meaning => {
+	const meaningHtml = meaning.map((meaning) => {
 		const definitions = meaning.definitions
 		const synonyms = meaning.synonyms
 		const definitionsArr = definitions.map(definition => {return `<li>${definition.definition}</li>`})
-		const singleDefinition = definitionsArr.join("") //transform the array in a string to evade the comma after each return
+		const examples = definitions.map(definition => {
+			if(typeof definition.example == "string"){
+				return (
+					`<span>" ${definition.example} "</span>`
+					
+					)
+			} else {
+				return ""
+			}
+		})
+		const example = examples.join(" ")
+		// console.log(examples)
+		// console.log(definitionsArr[0] + examples[0])
+		let definition = ""
+		for (let i = 0; i < definitionsArr.length; i++) {
+			definition += definitionsArr[i]+examples[i];
+		}
+		console.log(definition)
+		const singleDefinition = definition //transform the array in a string to evade the comma after each return
 		const synonymsArr = synonyms.map(synonym => {return `<span>${synonym}</span>`})
 		const singleSynonym = synonymsArr.join(",  ")
 		if(singleSynonym.length == 0){
@@ -89,6 +108,8 @@ function innerData(){
 	})
 	const meaningsString = meaningHtml.join("")
 	meaningSection.innerHTML = meaningsString
+	sourceLink.innerHTML = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
+	sourceLink.href = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
 }
 
 
