@@ -215,6 +215,12 @@ button, input[type="submit"], input[type="reset"] {
         &:hover{
             cursor: pointer;
             fill: #000;
+            path{
+                fill: #fff;
+            }
+            circle{
+                opacity: 1;
+            }
         }
     }
 }

@@ -201,6 +201,12 @@ button, input[type=submit], input[type=reset] {
   cursor: pointer;
   fill: #000;
 }
+.word-title .play-icon:hover path {
+  fill: #fff;
+}
+.word-title .play-icon:hover circle {
+  opacity: 1;
+}
 
 .word-type {
   font-size: 24px;
