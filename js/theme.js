@@ -2,16 +2,21 @@ const themeButton = document.querySelector("#change-theme")
 const themeCircle = document.querySelector(".theme-button")
 const body = document.querySelector("body")
 let dark = false
+
+
+const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+if (darkThemeMq.matches) {
+    setDarkTheme()
+} else {
+    setLightTheme()
+}
+
 themeButton.addEventListener("click" , (e) => {
     dark = !dark
     if(themeCircle.classList.contains("theme-button-switch")){
-        themeCircle.classList.remove("theme-button-switch")
-        themeButton.style = "background-color:"
-        body.classList.remove("dark")
+        setLightTheme()
     } else {
-        themeCircle.classList.add("theme-button-switch")
-        themeButton.style = "background-color: var(--purple);"
-        body.classList.add("dark")
+        setDarkTheme()
     }
 })
 
@@ -43,3 +48,15 @@ changeFontButtons.forEach(button => {
         }
     })
 })
+
+function setLightTheme(){
+    themeCircle.classList.remove("theme-button-switch")
+    themeButton.style = "background-color:"
+    body.classList.remove("dark")
+}
+
+function setDarkTheme(){
+    themeCircle.classList.add("theme-button-switch")
+    themeButton.style = "background-color: var(--purple);"
+    body.classList.add("dark")
+}
