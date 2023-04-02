@@ -46,7 +46,8 @@ window.addEventListener("load", () => {
  
 function innerData(){
 	//inner the data inside the html elements
-	searchedWord.innerHTML = `${data.word}`
+	const str = data.word.charAt(0).toUpperCase() + data.word.slice(1); //capitalize the first letter of the searched word
+	searchedWord.innerHTML = `${str}`
 	pronounce.innerHTML = `${data.phonetic}`
 	
 	//get the audio
