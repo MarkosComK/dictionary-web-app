@@ -241,6 +241,9 @@ button, input[type=submit], input[type=reset] {
   background-color: var(--line);
 }
 
+.meaning-wrapper {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
 .meaning-wrapper p {
   color: #757575;
   margin: 40px 0 25px;
@@ -337,4 +340,15 @@ button, input[type=submit], input[type=reset] {
 
 .add-display {
   display: inline;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */

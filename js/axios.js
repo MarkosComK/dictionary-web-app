@@ -77,7 +77,6 @@ function innerData(){
 		for (let i = 0; i < definitionsArr.length; i++) {
 			definition += definitionsArr[i]+examples[i];
 		}
-		console.log(definition)
 		const singleDefinition = definition //transform the array in a string to evade the comma after each return
 		const synonymsArr = synonyms.map(synonym => {return `<span>${synonym}</span>`})
 		const singleSynonym = synonymsArr.join(",  ")
