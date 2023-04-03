@@ -243,6 +243,7 @@ button, input[type="submit"], input[type="reset"] {
 
 
 .word-type{
+    animation: 1s ease-out 0s 1 slideInFromBottom;
     font-size: 24px;
     &::after{
         position: relative;
@@ -258,7 +259,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .meaning-wrapper{
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
 
     p{
         color: #757575;
@@ -293,6 +294,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .synonums{
+    animation: 1s ease-out 0s 1 slideIn;
     margin: 40px 0;
     span{
         font-weight: bold;
@@ -362,9 +364,19 @@ button, input[type="submit"], input[type="reset"] {
     display: inline;
 }
 
-@keyframes slideInFromLeft {
+@keyframes slideInFromBottom {
     0% {
         transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideIn{
+    0% {
+        transform: translateY(300%);
         opacity: 0;
     }
     100%{
